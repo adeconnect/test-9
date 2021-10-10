@@ -1,0 +1,53 @@
+
+
+.card{
+  margin-right: 10px;
+  padding: 5px 15px;
+}
+
+.card a{
+  text-decoration: none;
+}
+
+
+main{
+  width: 70%;
+}
+
+.form-inline, .btn-outline-light{
+  margin-left: 10px;
+}
+
+.header-links{
+  color: white;
+}
+
+
+.tags{
+  color: #007bff; 
+}
+
+a {
+  margin-left: 10px;
+}
+
+
+
+#edit-card {
+  padding: 10px 10px;
+}
+
+footer{
+  text-align: right;
+  margin: 60px 10px;
+  padding: 20px 10px;
+  background-color: rgb(214, 210, 210);
+}
+
+
+
+
+.project-list{
+  display: flex;
+  justify-content: space-between; 
+}

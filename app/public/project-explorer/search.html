@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Search-Projects</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <style>
+        .form-label {
+            background-color: rgb(216, 215, 215);
+            padding: 5px;
+            border: solid 1px silver;
+            margin-left: 10px;
+            height: 48px;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .project-list2 {
+            display: flex;
+        }
+
+        .card2 {
+            flex-basis: 30%;
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        .card-title {
+            color: #007bff
+        }
+
+        header {
+            display: flex;
+            flex-direction: row;
+            background-color: #007bff;
+            padding: 20px;
+            color: white;
+            margin-top: 2px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .navbar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .left {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            flex: 1;
+        }
+
+        .right {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        main {
+            margin: 10px 60px;
+        }
+
+        .form-inline,
+        .btn-outline-light {
+            margin-left: 10px;
+        }
+
+        .header-links {
+            color: white;
+        }
+
+        a {
+            margin-left: 10px;
+        }
+
+
+        .tags {
+            color: #007bff;
+        }
+
+        footer {
+            text-align: right;
+            margin: 60px 10px;
+            padding: 20px 10px;
+            background-color: rgb(214, 210, 210);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+        <a href="/project-explorer" class="navbar-brand">Project Explorer</a>
+        <form method="get" action="/project-explorer/search.html" class="form-inline">
+            <input type="text" placeholder="Search Projects" name="search" class="mr-sm-2 form-control" />
+            <input type="hidden" name="type" value="Name" />
+            <button type="submit" class="btn btn-outline-light">Search</button>
+        </form>
+        <div class="mr-auto navbar-nav">
+            <a href="createproject.html" class="nav-link">
+                Submit
+            </a>
+        </div>
+        <div class="navbar-nav">
+            <a href="index.html" class="nav-link" id="logout" style="display: none;">Logout</a>
+            <span id="username" style="display: none; color: white;" class="nav-link">Hi, </span>
+            <a href="register.html" class="nav-link" id="signup">Sign up</a><a
+                href="login.html" class="nav-link" id="login">Login</a>
+        </div>
+    </nav>
+    <main>
+        <section id="searchForm" class="bg-light p-3">
+            <h3>Projects Gallery</h3>
+            <form action="" name="searchForm">
+                <div class="form-group form-row">
+                    <input type="text" name="searchTerm" placeholder="Project Name, Authors, Abstract, Tags"
+                        class="form-control form-control-lg" style="width: 50%;">
+                    <label for="searchType" class="form-label"> Search By:</label>
+                    <select name="searchType" id="searchType" class="form-control form-control-lg" style="width: 30%;">
+                        <option value="Name">Name</option>
+                        <option value="Abstract">Abstract</option>
+                        <option value="Authors">Authors</option>
+                        <option value="Tags">Tags</option>
+                    </select>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-lg btn-primary">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <section id='searchResults'>
+            <p style="margin-top: 30px;"><strong>All Projects</strong>(0 results)</p>
+            <div class="project-list project-list2">
+                <section class="card card2">
+                    <h4 class="card-title">Project title</h4>
+                    <p class="card-subtitle">Author 1, Author 2</p>
+                    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde ad consectetur
+                        exercitationem dicta veniam quia doloremque. </p>
+                    <p class="tags">#html #css #javascript</p>
+                </section>
+
+                <section class="card card2">
+                    <h4 class="card-title">Project title</h4>
+                    <p class="card-subtitle">Author 1, Author 2</p>
+                    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde ad consectetur
+                        exercitationem dicta veniam quia doloremque. </p>
+                    <p class="tags">#html #css #javascript</p>
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Project Explorer 2020 - <strong>Edconnect</strong></p>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

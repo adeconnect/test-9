@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <style>
+        .form-group {
+            width: 45%;
+            margin-right: 10px;
+        }
+
+        header {
+            display: flex;
+            flex-direction: row;
+            background-color: #007bff;
+            padding: 20px;
+            color: white;
+            margin-top: 2px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .navbar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .left {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            flex: 1;
+        }
+
+        .right {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        main {
+            margin: 10px 60px;
+        }
+
+        .form-inline,
+        .btn-outline-light {
+            margin-left: 10px;
+        }
+
+        .header-links {
+            color: white;
+        }
+
+        a {
+            margin-left: 10px;
+        }
+
+
+        .tags {
+            color: #007bff;
+        }
+
+        footer {
+            text-align: right;
+            margin: 60px 10px;
+            padding: 20px 10px;
+            background-color: rgb(214, 210, 210);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+        <a href="/project-explorer" class="navbar-brand">Project Explorer</a>
+        <form method="get" action="/project-explorer/search.html" class="form-inline">
+            <input type="text" placeholder="Search Projects" name="search" class="mr-sm-2 form-control" />
+            <input type="hidden" name="type" value="Name" />
+            <button type="submit" class="btn btn-outline-light">Search</button>
+        </form>
+        <div class="mr-auto navbar-nav">
+            <a href="createproject.html" class="nav-link">
+                Submit
+            </a>
+        </div>
+        <div class="navbar-nav">
+            <a href="index.html" class="nav-link" id="logout" style="display: none;">Logout</a>
+            <span id="username" style="display: none; color: white;" class="nav-link">Hi, </span>
+            <a href="register.html" class="nav-link" id="signup">Sign up</a><a
+                href="login.html" class="nav-link" id="login">Login</a>
+        </div>
+    </nav>
+    <main>
+        <section style="margin-top: 40px;">
+            <span style="font-size: 1.5em;"><strong>Ade Chuks</strong></span> ade@edconnect.ng
+        </section>
+        <section class="container p-3" style="background-color: rgb(248, 247, 247);
+        ">
+            <div class="row">
+                <div class="col">Program</div>
+                <div class="col">Matriculation number</div>
+                <div class="col">Graduation year</div>
+            </div>
+            <div class="row">
+                <div class="col">Computer Information Systems</div>
+                <div class="col">33/3333</div>
+                <div class="col">2018</div>
+            </div>
+        </section>
+
+        <section style="margin-top: 30px;">
+            <h5><strong>Update Profile</strong></h5>
+            <hr style="margin-bottom: 60px;">
+            <form action="" method="get" name="updateProfile" class="form-row mx-auto w-75">
+                <div class="form-group">
+                    <label for="firstName"> First Name: </label><input type="text" name="firstName"
+                        class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="lastName"> Last Name: </label><input type="text" name="lastName" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="email"> Email Address: </label><input type="email" name="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="program"> Program: </label><select name="program" id="program" class="form-control">
+                        <option value="choose">Choose...</option>
+                        <option value="computer_science">Computer Science</option>
+                        <option value="computer_information_systems">Computer Information Systems</option>
+                        <option value="computer_technology">Computer Technology</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="matricNumber"> Matric Number: </label><input type="text" name="matricNumber"
+                        class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="graduationYear"> Graduation Year: </label><select name="graduationYear"
+                        id="GraduationYear" class="form-control">
+                        <option value="choose">Choose...</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Update Profile</button>
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <h5 style="margin-top: 50px;"><strong>Change Password</strong></h5>
+            <hr style="margin-bottom: 60px;">
+            <form action="" method="get" name="changePassword" class="form-row mx-auto w-75">
+                <div class="form-group" style="width: 30%;">
+                    <label for="currentPassword"> Current Password: </label><input type="password"
+                        name="currentPassword" class="form-control" placeholder="Current Password">
+                </div>
+                <div class="form-group" style="width: 30%;">
+                    <label for="newPassword"> New Password: </label><input type="password" name="newPassword"
+                        class="form-control" placeholder="Your new password">
+                </div>
+                <div class="form-group" style="width: 30%;">
+                    <label for="confirmPassword"> Confirm Password: </label><input type="password"
+                        name="confirmPassword" class="form-control" placeholder="Confirm new password">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary">Change Password</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Project Explorer 2020 - <strong>Edconnect</strong></p>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
