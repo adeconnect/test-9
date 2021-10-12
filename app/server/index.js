@@ -60,7 +60,7 @@ mongoose.connect(
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      useCreateIndex: true,
+      //useCreateIndex: true,
     },
      // callback that’s called when connection succeeds or fails.
    (err) => {
