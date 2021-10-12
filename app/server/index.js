@@ -54,23 +54,25 @@ app.use(express.static('public'));
 
 mongoose.set("bufferCommands", false);
 
-await mongoose.connect(
+(async () => {
+  await mongoose.connect(
 
-    process.env.MONGODB_URI, // connection string from .env file
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      //useCreateIndex: true,
-    },
-     // callback that’s called when connection succeeds or fails.
-   (err) => {
+      process.env.MONGODB_URI, // connection string from .env file
+      {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        //useCreateIndex: true,
+      },
+       // callback that’s called when connection succeeds or fails.
+     (err) => {
 
-    if (err) {
-      console.log("Error connecting to db: ", err);
-    } else {
-      console.log(`Connected to MongoDB @ ${process.env.MONGODB_URI}`);
+      if (err) {
+        console.log("Error connecting to db: ", err);
+      } else {
+        console.log(`Connected to MongoDB @ ${process.env.MONGODB_URI}`);
+      }
     }
-  }
-);
+  );
+})()
 
 app.listen(SERVER_PORT, () => console.log('Server listening on port ' + SERVER_PORT));
