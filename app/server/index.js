@@ -54,7 +54,7 @@ app.use(express.static('public'));
 
 mongoose.set("bufferCommands", false);
 
-mongoose.connect(
+await mongoose.connect(
 
     process.env.MONGODB_URI, // connection string from .env file
     {
